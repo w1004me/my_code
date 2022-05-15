@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>데이터 유형 - 논리형</title>
+    <style>
+      body {
+        text-align:center;
+        font-size:30px;
+      }
+    </style>
+</head>
+<body>
+  <p> 자바스크립트를 좋아하시나요?</p>
+  <form>
+    <input type="button" id="butt1" value="YES" onclick="likejs(true)">
+    <input type="button" id="butt2" value="NO" onclick="likejs(false)">
+  </form>
+  <div id="result"></div>
+  <script>
+    function likejs(choice) {
+      var choice;
+
+      if (choice == true) {
+        alert("자바스크립트로 다이내믹한 웹을 만들어보세요");
+      }
+      else  {
+        alert("이제부터 조금씩 자바스크립트와 친해보세요.");
+      }
+    }
+
+  </script>
+</body>
+</html>
