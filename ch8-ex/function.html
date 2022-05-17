@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>함수</title>
+	<style>
+	    body {
+           font-size:15px;
+           line-height:30px;
+	    }
+	    input {
+            margin:10px 40px;
+	    }
+	    div {
+            width:400px;
+            height:250px;
+            border:1px solid black;
+            border-radius:10px;
+            margin:30px;
+            text-align:center;
+	    }
+    </style>
+    <script>
+        function changeTo(myImg) {
+            var myNum = document.getElementById("num");
+            myNum.src = myImg;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="4로 바꾸기" onclick="changeTo('4.jpg')">
+        <input type="button" value="2로 바꾸기" onclick="changeTo('2.jpg')">
+    </form>
+    <div>
+        <img src="2.jpg" id="num">
+    </div>
+</body>
+</html>

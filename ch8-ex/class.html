@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>실습실 안내</title>
+	<style>
+	    body {
+            background-color:#0c3268;
+            color:white;
+	    }
+        p {
+            margin-top:80px;
+            font-size:25px;
+            font-weight:700;
+            text-align:center;
+        }
+	    big {
+            color:yellow;
+	    }
+	</style>
+</head>
+<body>
+    <script>
+        
+        var subj = prompt("학과 선택(1:전기전자,2:건축공,3:컴퓨터공,4:신소재공)");
+
+		
+		switch(subj) {
+		    case "1": {
+		        document.write("<p>전기전자공학과 실습실은 <big>2011호</big>입니다.</p>");
+		        break;
+		    }
+		    case "2": {
+		        document.write("<p>건축공학과 실습실은  <big>2014호</big>입니다.</p>");
+		        break;
+		    }
+		    case "3": {
+		        document.write("<p>컴퓨터공학과 실습실은  <big>2012호</big>입니다.</p>");
+		        break;
+		    }
+		    case "4": {
+		        document.write("<p>신소재공학과 실습실은  <big>2011호</big>입니다.</p>");
+		        break;
+		    }
+		    default: {
+		        document.write("<p>잘못 입력했습니다.</p>");
+		    }
+		}
+    </script>
+</body>
+</html>

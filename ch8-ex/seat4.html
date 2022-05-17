@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>컴퓨터공학과 자리배치도</title>
+    <style>
+        p {
+            border:2px solid black;
+            border-radius:15px;
+            margin:80px auto;
+            padding:15px;
+            font-size:20px;
+            font-weight:700;
+            background:#05a417;
+            color:white;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var grade = prompt("몇 학년인가요? (1~4)");
+
+        if (grade == 1) document.write("<p>1학년은 실습실 3-A로 가세요.</p>");
+        else if (grade == 2) document.write("<p>2학년은 실습실 3-B로 가세요.</p>");
+        else if (grade == 3) document.write("<p>3학년은 실습실 3-C로 가세요.</p>");
+        else if (grade == 4) document.write("<p>4학년은 실습실 3-D로 가세요.</p>");
+        else document.write("잘못 입력했습니다.");
+    </script>
+</body>
+</html>
