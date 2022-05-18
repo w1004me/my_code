@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        a, a:visited {
+            text-decoration:none;
+            color:#222;
+        }
+    </style>
+    <title>DOM 리스트</title>
+    <script>
+        function change(indx, newSrc) {
+            letters = document.getElementsByTagName("img");
+            letters[indx].src = newSrc;
+        }
+    </script>
+</head>
+<body>
+    <h1>웹 표준 기술은? </h1>
+    <p>아래 이미지를 클릭해 보세요.</p>
+    <img src="h.jpg" onclick="change(0, 'h2.jpg')">
+    <img src="t.jpg" onclick="change(1, 't2.jpg')">
+    <img src="m.jpg" onclick="change(2, 'm2.jpg')">
+    <img src="l.jpg" onclick="change(3, 'l2.jpg')">
+    <img src="5.jpg" onclick="change(4, '5-2.jpg')">
+</body>
+
+</html>

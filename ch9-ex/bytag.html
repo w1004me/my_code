@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        a, a:visited {
+            text-decoration:none;
+            color:#222;
+        }
+    </style>
+    <title>DOM 연습</title>
+    <script>
+        function change(newSrc) {
+            letters = document.getElementsByTagName("img");
+            letters[4].src = newSrc;
+        }
+    </script>
+</head>
+<body>
+    <h1>웹 표준 기술은? </h1>
+    <p>숫자 4를 클릭하세요.</p>
+    <img src="h.jpg">
+    <img src="t.jpg">
+    <img src="m.jpg">
+    <img src="l.jpg">
+    <img src="4.jpg" onclick="change('5.jpg')">
+</body>
+
+</html>

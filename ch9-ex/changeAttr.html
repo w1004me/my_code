@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML 속성 바꾸기</title>
+	<style>
+	    body {
+           font-size:15px;
+           line-height:30px;
+	    }
+	    input {
+            margin:10px 40px;
+	    }
+	    div {
+            width:400px;
+            height:250px;
+            border:1px solid black;
+            border-radius:10px;
+            margin:30px;
+            text-align:center;
+	    }
+    </style>
+    <script>
+        function changeTo(myImg) {
+            document.getElementById("num").src = myImg;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="two.jpg" id="num" onmouseover="changeTo('four.jpg')" onmouseout="changeTo('two.jpg')">
+    </div>
+</body>
+</html>

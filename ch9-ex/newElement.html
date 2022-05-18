@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        p {
+            font-size: 20px;
+        }
+        accent {
+            color:blue;
+        }
+    </style>
+    <title>새로운 노드 추가</title>
+    <script>
+        function addParagraph() {
+            var newP = document.createElement("p");
+            var pNode = document.createTextNode("최신 웹 기술을 함께 공부할 회원을 모집합니다.");
+            newP.appendChild(pNode);
+
+            var infoArea = document.getElementById("info");
+            info.appendChild(newP);
+        }
+        function addImage() {
+            var newImg = document.create("img");
+            var imgNode = document.createAttribute("src");
+            imgNode.value = "logo.png";
+            newImg.appendChild(imgNode);
+
+            var infoArea = document.getElementById("info");
+            info.appendChild(newImg);
+        }
+    </script>
+</head>
+<body>
+    <h1>스터디 회원 모집</h1>
+    <a href="#" onclick="addParagraph()"><p>더 보기!</p></a>
+    <a href="#" onclick="addImg()"><p>이미지 보기</p></a>
+    <div id="info"></div>
+</body>
+</html>

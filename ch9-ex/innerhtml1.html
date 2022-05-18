@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        p {
+            font-size:20px;
+        }
+
+        #quest {
+            font-color: blue;
+        }
+        #sol {
+            font-color: red;
+        }
+    </style>
+    <title>innerHTML 프로퍼티</title>
+</head>
+<body>
+    <p>질문:<span id="quest">웹 표준 기술은? </span></p>
+    <p>해답:<span id="sol">HTML5</span></p>
+    <hr>
+    <script>
+        var txt = document.getElementById("quest").innerHTML;
+        document.write("질문의 내용: " + txt);   
+    </script>
+</body>
+</html>

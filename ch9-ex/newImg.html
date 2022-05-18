@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+    <title>새로운 이미지 추가</title>
+    <script>
+        function addImage() {
+            var newImg = document.createElement("img");
+            var attrNode = document.createAttribute("src");
+            attrNode.value = "logo.png";
+            var altNode = document.createAttribute("alt");
+            altNode.value = "HTML5 공식 로고";
+            newImg.setAttributeNode(attrNode);
+            newImg.setAttributeNode(altNode);
+
+            document.getElementById("info").appendChild(newImg);
+        }
+    </script>
+</head>
+<body>
+    <h1>스터디 회원 모집</h1>
+    <a href="#" onclick="addImage()"><p>이미지 보기</p></a>
+    <div id="info"></div>
+</body>
+</html>
