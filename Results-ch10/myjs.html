@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>스터디 회원 모집</title>
+    <style>
+        #detail {
+            width: 400px;
+            height:90px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding-top: 5px;
+            padding-left:20px;
+            color:blue;
+        }
+		#trigger:hover {
+			cursor :pointer;
+		}
+    </style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#trigger').click(function() {
+				$('#detail').html('<p>스터디 주제 : HTML5, CSS3, Javascript</p><p>모집 대상 : 신입생</p>');
+			})
+		});
+	</script>
+</head>
+<body>
+   <h1>스터디 회원 모집</h1>
+   <img src="click.jpg">
+    <p id="trigger">자세한 내용을 보려면 클릭</p>
+    <div id="detail"></div>    
+</body>
+</html>
