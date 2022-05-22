@@ -1,0 +1,68 @@
+﻿body {
+	font-family:"맑은 고딕", "돋움", "굴림";	/* 문서 전체의 글꼴 지정 */
+        background:url(bg.jpg) no-repeat left top fixed;     /* 문서에 배경 이미지 삽입 */        
+        background-size:cover;/* 문서 크기에 따라 배경 이미지 크기도 조절 */			
+}
+#wrapper{
+	margin:30px auto;  /* wrapper 영역을 화면 중앙에 배치  */
+	width:750px; 
+}
+section {
+	display:block;  /* section 을 블록 콘텐츠로 지정  */
+	margin:15px auto 0; /* 상단 여백 15px, 좌우 여백 자동, 하단 여백 0 */
+}
+h2 {
+        margin-left:10px; /* 왼쪽에 마진 두기 */
+        background:url(icon.png) no-repeat left top; /* 배경 이미지  */
+        background-size:contain;  /* 여백 크기에 맞춰 배경 이미지 자동 조절 */
+        padding-left:50px;  /* 제목 왼쪽 패딩 여백 - 배경 이미지 들어갈 영역 */ 
+        padding-top:10px;  /*  제목 위쪽 패딩 여백 */ 
+        padding-bottom:10px;  /* 제목 아래쪽 패딩 여백 */
+}		
+nav {
+	width:100%;  /* 메뉴 너비는 부모 요소(section)의 너비와 같게 */
+	height:40px;  /*  메뉴 높이 */
+	background-color:#222;  /* 메뉴 색상 */
+}	
+nav ul {
+	list-style:none;  /* 불릿 기호 없애기 */
+}
+nav ul li {
+	display:inline;   /*  각 항목은 인라인 콘텐츠로 설정 */
+	float:left;   /*  가로로 배치 */
+	margin:10px;   /*  각 항목 사이의 마진 10px */
+}
+nav a {
+			padding:6px 40px 9px;   /* 메뉴 항목의 패딩 값  */
+			color:white;   /* 메뉴 항목의 글자색 */
+			text-decoration:none;  /* 링크 밑줄 없애기 */
+			text-shadow:0 1px 1px black;     /* 메뉴 텍스트에 그림자 효과 추가  */         
+		}
+        nav a:hover{          
+            background-color: #ffd800;  /* 배경색 */ 
+            color: black; /*  글자색 */ 
+            text-shadow:none;  /* 그림자 효과 없애기 */ 
+            border-top-left-radius:5px; /* 윗부분에 둥그런 모서리 처리 */ 
+            border-top-right-radius:5px; /* 윗부분에 둥그런 모서리 처리 */ 
+        }	
+         nav a.current {          
+            background-color: white;  /* 배경색 */ 
+            color: black;  /*  글자색 */ 
+            text-shadow:none;  /* 그림자 효과 없애기 */ 
+            border-top-left-radius:5px; /* 윗부분에 둥그런 모서리 처리 */ 
+            border-top-right-radius:5px; /* 윗부분에 둥그런 모서리 처리 */ 
+        }		
+		article {
+			padding:5px 20px;   /* 상하 패딩 5xp, 좌우 패딩 20px */
+			border-left:2px solid #222;  /* 내용 왼쪽에 2px짜리 실선  */
+			border-right:2px solid #222; /* 내용 오른쪽에 2px짜리 실선  */
+			background-color:rgba(255,255,255,.9); /* 약간 비치는 흰색 배경 */
+		}	
+		footer {
+			margin:0 auto;   /* 푸터를 화면 중앙에 배치 */
+			padding:20px;  /* 상하좌우 패딩 20px */
+			font-size:9px;  /* 글자 크기를 본문보다 작게  */
+			background-color:#666;  /* 푸터의 배경색 */
+			color:white; /* 푸터의 글자색 */
+			border:2px solid #222;  /* 푸터의 네방향에 2px 짜리 실선 */
+		}
