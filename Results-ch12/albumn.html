@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>간단한 포토 앨범</title>
+    <style>
+        ol {
+            margin:20px 10px;
+        }
+		#gallery{
+			width:920px;
+			height:190px;
+			position:relative;
+			background:#808080;
+			border:2px solid black;
+			border-radius:10px;
+		}
+		ul {
+			list-style:none;
+			margin-left:-20px;
+		}
+		ul li{
+			display:inline;
+			float:left;
+			padding:10px;
+		}
+		.bigPic {
+			position:absolute;
+			display:none;
+			margin-left:100px;
+			margin-top:-50px;
+			float:right;
+		}
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#small1").click(function() {
+				$("#big1").fadeIn(1000);
+			});
+			$("#big1").click(function(){
+				$("#big1").fadeOut(1000);
+			});
+			$("#small2").click(function() {
+				$("#big2").fadeIn(1000);
+			});
+			$("#big2").click(function(){
+				$("#big2").fadeOut(1000);
+			});			
+			$("#small3").click(function() {
+				$("#big3").fadeIn(1000);
+			});
+			$("#big3").click(function(){
+				$("#big3").fadeOut(1000);
+			});
+			$("#small4").click(function() {
+				$("#big4").fadeIn(1000);
+			});
+			$("#big4").click(function(){
+				$("#big4").fadeOut(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+	<div id="gallery">
+		<ul>
+			<li>
+				<img src="spring-s.jpg" id="small1">
+				<img src="spring.jpg" id="big1" class="bigPic" width="800" height="530" alt="한국의 봄">
+			</li>
+			<li>
+				<img src="summer-s.jpg" id="small2">
+				<img src="summer.jpg" id="big2" class="bigPic" width="800" height="530" alt="한국의 여름">
+			</li>
+			<li>
+				<img src="fall-s.jpg" id="small3">
+				<img src="fall.jpg" id="big3" class="bigPic" width="800" height="530" alt="한국의 가을">
+			</li>
+			<li>
+				<img src="winter-s.jpg" id="small4">
+				<img src="winter.jpg" id="big4" class="bigPic" width="800" height="530" alt="한국의 겨울">
+			</li>			
+		</ul>
+	</div>
+</body>
+</html>

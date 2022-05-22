@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>애니메이션과 큐</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-top:5px;
+            margin-left:150px;      
+        }
+        img {
+            border:2px solid black;
+        }
+        figcaption {
+            margin-top: 15px;
+            margin-left:30px;
+            font-size:0.8em;
+        }
+        figcaption b{
+            font-size:1.0em;
+            color:blue;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn").click(function () {
+                $("img").animate({ width: "600px" },"slow");
+                $("img").animate({ height: "398px" }, "slow");
+                $("img").animate({ borderRadius: "50px" }, "slow");
+                $("img").queue(function () {
+                    $("img").css("border-color", "green");
+                    $("img").css("border-width", "5px");
+                    $("img").css("box-shadow", "5px 5px 5px black");
+                    $("img").dequeue();
+                });
+                $("figcaption").animate({ fontSize: "1.5em" }, 1000);
+                $("figcaption").queue(function(){
+                    $("figcaption").css("font-style","italic");
+                    $("figcaption").dequeue();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <figure>
+            <img src="winter.jpg" width="400" height="265" alt="눈이 가득 내려앉은 장독대" id="winter">
+            <figcaption><b>한국의 겨울</b> 너의 부재를 덮어주는 사방의 눈,눈.</figcaption>
+        </figure>
+        <button id="bttn">확대하기</button>
+    </div>
+
+</body>
+</html>
