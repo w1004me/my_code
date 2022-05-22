@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>학과 전체 MT</title>
+    <style>
+        #choice {
+            text-align:right;
+            padding:10px;
+            margin-bottom:20px;
+        }
+        #choice>img {
+            margin:5px 15px;
+        }
+        #class {
+            font-family:Arial;
+            font-size:1.5em;
+            font-weight:bold;
+        }
+        p {
+            font-size:14px;
+            line-height:30px;
+        }
+        li {
+            font-size:12pt;
+            line-height:30px;
+        }
+        #content {
+            width:80%;
+            margin:0 auto;
+            border:2px solid #222;
+            border-radius:5px;
+            padding:15px;
+        }
+        button {
+            margin:10px;
+        }
+        button:hover {
+            cursor:pointer;
+        }
+        .mybttn {
+            border:1px solid #222;
+            padding:5px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        $('#1').click(function () {
+	            $('#content').css('background-color', '#ffe100');
+	            $('#content').css('color', 'black');
+	            $('h2').html('<span id="class">1</span>학년 공지사항');
+	        });
+	        $('#2').click(function () {
+	            $('#content').css('background-color', '#aa00ff');
+	            $('#content').css('color', 'white');
+	            $('h2').html('<span id="class">2</span>학년 공지사항');
+	        });
+	        $('#3').click(function () {
+	            $('#content').css('background-color', '#84DE81');
+	            $('#content').css('color', 'black');
+	            $('h2').html('<span id="class">3</span>학년 공지사항');
+	        });
+	        $('#4').click(function () {
+	            $('#content').css('background-color', '#80d4ff');
+	            $('#content').css('color', 'black');
+	            $('h2').html('<span id="class">4</span>학년 공지사항');
+	        });
+	    });
+	</script>
+</head>
+<body>
+    <div id="choice">
+        <img src="1.png" title="1학년을 위한 공지사항" id="1"/>
+        <img src="2.png" title="2학년을 위한 공지사항" id="2"/>
+        <img src="3.png" title="3학년을 위한 공지사항" id="3"/>
+        <img src="4.png" title="4학년을 위한 공지사항" id="4"/>
+    </div>
+    <h1>새내기들과 함께하는 학과 전체 MT</h1>
+    <div id="content">
+	    <h2></h2>
+        <p>안녕하십니까?</p>
+        <p>벌써 학기가 시작된지 한 달이 되어갑니다. <br>
+            올해도 새내기들과 함께 하는 학과 전체 MT를 갑니다. <br />
+            새내기들이 재학생과 교수님들과의 친목을 도모할 수 있는 자리를 마련하고자 합니다.</p>
+        <p>해마다 있는 행사지만 꼭 참석하셔서 사제간에, 선후배간에 돈독한 정을 쌓을 수 있기를 바랍니다.</p>
+        <ul>
+            <li><b>행사명</b> : 컴퓨터공학과 전체 MT</li>
+            <li><b>행사 목적</b> : 선후배간, 사제간의 유대 관계 형성과 친목을 위함</li>
+            <li><b>행사일</b> : 3월 25일(금)~3월 27일(일)</li>
+        </ul>
+    </div>
+</body>
+</html>
