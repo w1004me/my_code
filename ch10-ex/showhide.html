@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 기본 구문</title>
+    <style>
+        input {
+            margin:15px 20px;
+            padding:5px 10px;
+            border:1px solid black;
+            border-radius:5px;
+            background:#ff8500;
+        }
+        img {
+            margin-top:20px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        function showMe(){
+            $('img').show();
+        }
+        function hideMe() {
+            $('img').hide();
+        }
+    </script>
+</head>
+<body>
+    <h1>jQuery 맛보기</h1>
+    <form>
+        <input type="button" value="표시하기" onclick="showMe()">
+        <input type="button" value="감추기" onclick="hideMe()">
+    </form>
+    <img src="logo.png">
+</body>
+</html>

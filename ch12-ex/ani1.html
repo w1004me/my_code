@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>애니메이션 효과</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-top:5px;
+            margin-left:150px;      
+        }
+        img {
+            border:2px solid black;
+        }
+        figcaption {
+            margin-top: 15px;
+            margin-left:30px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn").click(function () {
+                $("img").animate({ width: "600px" },1000);
+                $("img").animate({ height: "398px" }, 1000);
+                $("img").animate({ borderRadius: "50px" }, 1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <figure>
+            <img src="fall.jpg" width="400" height="265" alt="유채꽃과 매화꽃" id="spring">
+            <figcaption><b>한국의 가을</b> 마지막 절정을 향해 치닫는 빨간 얼굴.</figcaption>
+        </figure>
+    </div>
+    <button id="bttn">확대하기</button>
+</body>
+</html>

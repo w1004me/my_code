@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>학과 전체 MT</title>
+    <style>
+
+        p {
+            font-size:16px;
+            line-height:30px;
+        }
+        li {
+            font-size:12pt;
+            line-height:30px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#bttn1').click(function () {
+                alert($('ul li:last-child').text());
+            });            
+        });
+    </script>
+</head>
+<body>
+    <h1>새내기들과 함께하는 학과 전체 MT</h1>
+    <p>안녕하십니까?</p>
+    <p>벌써 학기가 시작된지 한 달이 되어갑니다. <br>
+       올해도 새내기들과 함께 하는 학과 전체 MT를 갑니다. <br />
+       새내기들이 재학생과 교수님들과의 친목을 도모할 수 있는 자리를 마련하고자 합니다.</p>
+    <p>해마다 있는 행사지만 꼭 참석하셔서 사제간에, 선후배간에 돈독한 정을 쌓을 수 있기를 바랍니다.</p>
+    <ul>
+        <li><b>행사명</b> : Membership Training</li>
+        <li><b>행사 목적</b> : 선후배간, 사제간의 유대 관계 형성과 친목을 위함</li>
+        <li><b>행사일</b> : 3월 25일(금)~3월 27일(일)</li>
+    </ul>
+    <hr />
+    <form>
+        <input type="button" value="행사일 확인하기" id="bttn1">
+    </form>
+</body>
+</html>

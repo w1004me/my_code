@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 이벤트</title>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#photo').hover(function () {
+                $('#photo').attr('src', "small2.jpg");
+            }, function () {
+                $('#photo').attr('src', "small1.jpg");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+    
+        <p> 그림 위로 마우스 포인터를 올려보세요. </p>
+  
+        <img src="small1.jpg" id="photo">        
+
+    </div>
+</body>
+</html>

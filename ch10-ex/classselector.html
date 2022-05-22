@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>class 셀렉터</title>
+    <style>
+        .dayNight {
+            width:350px;
+            margin-top:30px;
+            margin-right:20px;
+            border:2px solid #333;
+            box-shadow:2px 2px 3px #000;
+            float:left;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#hideAll').click (function() {
+                $('.dayNight').hide();
+            })
+            $('#showAll').click(function () {
+                $('.dayNight').show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" id="hideAll" value="그림을 감추려면 클릭! ">
+        <input type="button" id="showAll" value="그림을 보려면 클릭! ">
+    </form>
+    <div class="dayNight" id="sun">       
+        <img src="sun.jpg" alt="낮을 나타내는 태양">
+    </div>
+    <div class="dayNight" id="moon">
+        <img src="moon.jpg" alt="밤을 나타내는 달">
+    </div>
+</body>
+</html>

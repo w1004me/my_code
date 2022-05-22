@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>이미지 슬라이드 쇼</title>
+    <style>
+        img {
+            display:block;
+        } 
+       ul {
+            list-style:none;
+            margin-left:-20px;
+        }
+
+        ul li{
+            display:inline-table;            
+            padding:10px;
+        }
+
+        .bigPic {
+            position: absolute;
+            left:40px;
+            top:230px;
+            display: none;
+        }
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin:10px 15px;      
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tog1").click(function () {
+                $("#big1").slideToggle(1000);
+            });
+            $("#tog2").click(function () {
+                $("#big2").slideToggle(1000);
+            });
+        });        
+    </script>
+</head>
+<body>
+
+    <div id="gallery">
+        <ul>
+            <li>
+                <div>
+                    <img src="spring-s.jpg" id="small1">
+                    <button id="tog1">큰 이미지 보기/닫기</button>
+                </div>                    
+                <img src="spring.jpg" id="big1" class="bigPic" alt="한국의 봄" width="800" height="530">
+            </li>
+            <li>
+                <div>
+                    <img src="summer-s.jpg" id="small2">
+                    <button id="tog2">큰 이미지 보기/닫기</button>
+                </div>
+                <img src="summer.jpg" id="big2" class="bigPic" alt="한국의 여름" width="800" height="530">
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</body>
+</html>

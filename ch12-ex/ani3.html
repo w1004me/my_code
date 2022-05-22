@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>애니메이션 효과</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-bottom:15px;
+            margin-left:50px;      
+        }
+        #gallery {
+            position:absolute;
+            width:100px;
+            height:100px;
+            margin-left:70px;
+            background-color:skyblue;
+            border: 1px solid #222;;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn1").click(function () {
+                $("#gallery").animate({ width: "300px" },1500);
+                $("#gallery").animate({ height: "300px" }, 1500);
+                $("#gallery").queue(function () {
+                    $("#gallery").css("border-color", "red");
+                    $("#gallery").css("background-color", "orange");
+                    $("#gallery").dequeue();
+                });
+                $("#gallery").animate({ borderRadius: "20px" }, 1500);
+            });
+            $("#bttn2").click(function () {
+                $("#gallery").clearQueue();
+            });
+            $("#bttn3").click(function () {
+                $("#gallery").stop();
+            });
+            $("#bttn4").click(function () {
+                $("#gallery").finish();
+            });
+        });
+    </script>
+</head>
+<body>
+        <button id="bttn1">확대하기</button>
+        <button id="bttn2">멈추기(clearQue)</button>
+        <button id="bttn3">멈추기(stop)</button>
+        <button id="bttn4">끝내기(finish)</button>
+    <div id="gallery">   </div>
+
+</body>
+</html>

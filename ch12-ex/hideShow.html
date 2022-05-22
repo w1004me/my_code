@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>hide() 메서드</title>
+    <style>
+        #gallery {    
+            width:450px;        
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        #gallery figure {
+            margin:10px 20px;
+        }
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin:5px 15px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn1").click(function () {
+                $("figure").hide(1000);
+                $("#gallery").css("border", "none");
+            });
+            $("#bttn2").click(function () {
+                $("figure").show(1000)
+                $("#gallery").css({ "border": "2px solid black", "border-radius": "10px" });                
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="bttn1">hide</button>
+    <button id="bttn2">show</button>
+    <div id="gallery">
+        <figure>
+            <img src="spring.jpg" width="400" height="265" alt="유채꽃과 매화꽃" id="spring">
+            <figcaption><b>한국의 봄</b> 화사하게 피어난 분홍 매화꽃</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

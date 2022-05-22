@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>애니메이션 효과</title>
+    <style>
+        button {
+            width: 100px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-top:5px;
+            margin-left:50px;      
+        }
+        figure {
+            margin-left: 10px;
+        }
+        img {
+            border:2px solid black;
+        }
+        figcaption {
+            margin-top: 15px;
+            margin-left:30px;
+            font-size:1em;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn1").click(function () {
+                $("figure").animate({ marginLeft: "+=300px" }, "slow");
+                $("figure").animate({ marginLeft: "-=300px" }, "slow");
+            });
+            $("#bttn2").click(function(){
+                $("img").animate({ height: "toggle" }, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <figure>
+            <img src="fall.jpg" width="400" height="265" alt="유채꽃과 매화꽃" id="spring">
+            <figcaption><b>한국의 가을</b> 마지막 절정을 향해 치닫는 빨간 얼굴.</figcaption>
+        </figure>
+    </div>
+    <button id="bttn1">좌우 이동</button>
+    <button id="bttn2"> 이미지 토글</button>
+</body>
+</html>

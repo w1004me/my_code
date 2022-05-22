@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>학과 전체 MT</title>
+    <style>
+        p {
+            font-size:14px;
+            line-height:30px;
+        }
+        li {
+            font-size:12pt;
+            line-height:30px;
+        }
+        .bluetxt {
+            color:blue;
+            text-shadow:1px 1px 1px white;
+        }
+        .whitetxt {
+            color:white;
+        }
+        #heading {
+            width:550px;
+            background-color:yellow;
+            padding:10px;
+        }
+        #heading2 {
+            width:550px;
+            background-color:#222;
+            padding:10px;
+        }
+        #heading:hover, #detail:hover{
+            cursor:pointer;
+        }
+            
+        #detail {
+            width:550px;
+            border:2px solid #222;
+            border-radius:5px;
+            padding:15px;
+            background-color:#d6fcff;
+        }
+        #newDetail {
+            width:550px;
+            border:2px dotted red;
+            border-radius:5px;
+            padding:15px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        $('#heading').click(function () {
+	            $("#heading").removeAttr("class id").attr({ "id": "heading2", "class": "whitetxt" });
+	        });
+	        $("#detail").click(function () {
+	            $("#detail").removeAttr("id").attr("id", "newDetail");
+	        });
+	    });
+	</script>
+</head>
+<body>
+    <h1 class="bluetxt" id="heading">새내기들과 함께하는 학과 전체 MT</h1>
+    <p>안녕하십니까?</p>
+    <p>벌써 학기가 시작된지 한 달이 되어갑니다. <br>
+       올해도 새내기들과 함께 하는 학과 전체 MT를 갑니다. <br />
+       새내기들이 재학생과 교수님들과의 친목을 도모할 수 있는 자리를 마련하고자 합니다.</p>
+    <p>해마다 있는 행사지만 꼭 참석하셔서 사제간에, 선후배간에 돈독한 정을 쌓을 수 있기를 바랍니다.</p>
+    <div id="detail">
+        <h3>세부사항</h3>
+        <ul>
+            <li><b>행사명</b> : 컴퓨터공학과 전체 MT</li>
+            <li><b>행사 목적</b> : 선후배간, 사제간의 유대 관계 형성과 친목을 위함</li>
+            <li><b>행사일</b> : 3월 25일(금)~3월 27일(일)</li>
+        </ul>
+    </div>
+</body>
+</html>

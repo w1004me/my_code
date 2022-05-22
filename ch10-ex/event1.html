@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 이벤트</title>
+    <style>
+        img {
+            margin: 15px;
+        }
+        img#photo2 {
+            visibility:hidden;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#photo1').dblclick(function () {
+                $('#photo2').css('visibility', 'visible');
+            });
+            $('#photo2').click(function () {
+                $('#photo2').css('visibility', 'hidden');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1> 학년별 엠티 공고</h1>
+        <p> 작은 그림을 더블클릭하면 좀더 큰 사진을 볼 수 있습니다. </p>
+        <p> 큰 그림은 클릭하면 닫힙니다.</p>
+  
+        <img src="small1.jpg" id="photo1">        
+        <img src="big1.jpg" id="photo2">
+
+    </div>
+</body>
+</html>

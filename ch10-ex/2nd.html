@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 이벤트</title>
+    <style>
+        .schedule {
+            margin:20px 5px;
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        th, td {
+            padding:10px;
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        caption {
+            margin: 5px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#link1').click(function() {
+                $('a[href]').css({'background-color':'yellow', 'font-weight':'bold', 'text-decoration':'none'});
+            })
+        });
+    </script>
+</head>
+<body>
+        <table class="schedule">
+            <caption>2학년 엠티 공고</caption>
+            <tr>
+                <th>날짜</th>
+                <td>4월 7일 ~ 4월 10일</td>
+            </tr>
+            <tr>
+                <th>장소</th>
+                <td>남이섬</td>
+            </tr>
+            <tr>
+                <th>집결장소</th>
+                <td>4/7 오후 2시까지 체육관 앞</td>
+            </tr>
+        </table>
+</body>
+</html>

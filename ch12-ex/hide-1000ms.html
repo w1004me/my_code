@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>hide() 메서드</title>
+    <style>
+        #gallery {    
+            width:450px;        
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        #gallery figure {
+            margin:10px 20px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("img").click(function () {
+                $("img").hide(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>hide(1000)을 사용해 천천히 사라지게</p>
+    <div id="gallery">
+        <figure>
+            <img src="spring.jpg" width="400" height="265" alt="유채꽃과 매화꽃">
+            <figcaption><b>한국의 봄</b> 화사하게 피어난 분홍 매화꽃</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

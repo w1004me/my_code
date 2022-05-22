@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>태그 셀렉터</title>
+    <style>
+        p {
+            color:blue;
+            line-height:30px;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            display:block;
+            float:left;
+            padding:10px;
+            border:1px solid black;
+            margin-right:15px;
+        }
+        ul li:hover{
+            cursor:pointer;
+        }
+        hr {
+            clear: both;
+            visibility:hidden;
+            height:10px;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#hideP').click (function() {
+                $('p').hide();
+            })
+            $('#showP').click(function () {
+                $('p').show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>스터디 회원 모집</h1>
+    <ul>
+        <li id="hideP">텍스트 감추기</li>
+        <li id="showP">텍스트 표시하기</li>
+    </ul>
+    <hr />
+    <p>스터디 주제 : HTML5, CSS3, Javascirpt</p>
+    <p>모집 대상 : 웹 기술에 관심있는 재학생</p>
+    <p>모집 기한 : 4월 중간 고사 이전까지</p>
+
+    
+</body>
+</html>

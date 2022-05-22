@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 셀렉터</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        #menu li {
+            float:left;
+        }
+        input {
+            margin:10px;
+            padding:5px;
+            border:1px solid black;
+            border-radius:5px;
+        }
+        hr {
+            clear:both;
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+            $('#link1').click(function() {
+                $('a[href]').css({'background-color':'yellow', 'font-weight':'bold', 'text-decoration':'none'});
+            })
+            $('#link2').click(function () {
+                $('a[target="_blank"]').css({ 'background-color': 'yellow', 'font-weight': 'bold', 'text-decoration': 'none' });
+            })
+            $('#link3').click(function () {
+                $('a[href$="pdf"]').css({ 'background-color': 'yellow', 'font-weight': 'bold', 'text-decoration': 'none' });
+            })
+            $('#link4').click(function () {
+                $('a[href^="mailto:"]').css({ 'background-color': 'yellow', 'font-weight': 'bold', 'text-decoration': 'none' });
+            })
+        });
+    </script>
+</head>
+<body>
+    <a id="top"></a>
+    <div id="container">
+        <form>
+            <ul id="menu">
+                <li><input type="button" id="link1" value="파일이나 문서 링크하는 요소"></li>
+                <li><input type="button" id="link2" value="새 창으로 열리는 요소"></li>
+                <li><input type="button" id="linke" value="PDF 문서를 링크하는 요소"></li>
+                <li><input type="button" id="link4" value="메일 링크 요소"></li>
+            </ul>                                 
+         </form>
+        <hr>
+        <p> 학년별 엠티 일정입니다.</p>
+        <p> 자신의 학년을 클릭하면 엠티 일정을 볼 수 있습니다. </p>
+        <ul>
+            <li><a href="1st.html">1학년</a></li>
+            <li><a href="2nd.pdf">2학년</a></li>
+            <li><a href="http://www.domain.com/3rd.html" target="_blank">3학년</a></li>
+            <li>4학년</li>
+        </ul>
+        
+        <div id="memo">
+            <p> 여러 사람이 함께 움직이므로 반드시 시간 엄수해 주세요.</p>
+            <p> 엠티 비용은 학년 관계없이 5만원입니다. 과대표에게 내주세요.</p>            
+            <p> 기타 궁금한 사항은 <a href="mailto:comeng@abc.ac.kr">학과사무실</a>로 문의바랍니다.</p>
+        </div>
+    </div>
+</body>
+</html>

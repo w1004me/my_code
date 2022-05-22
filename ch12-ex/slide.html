@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>슬라이드 효과</title>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            margin-left:50px;      
+        }
+    </style>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bttn1").click(function () {
+                $("figure").slideUp(1000);
+            });
+            $("#bttn2").click(function () {
+                $("figure").slideDown(1000);              
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <figure>
+            <img src="summer.jpg" width="400" height="265" alt="유채꽃과 매화꽃" id="spring">
+            <figcaption><b>한국의 여름</b> 초록 물이 뚝뚝 떨어질 것 같은 싱그러움</figcaption>
+        </figure>
+    </div>
+    <button id="bttn1">Slide Up</button>
+    <button id="bttn2">Slide Out</button>
+</body>
+</html>
